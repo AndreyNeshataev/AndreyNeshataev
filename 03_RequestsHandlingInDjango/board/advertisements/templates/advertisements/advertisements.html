@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <ul>
+        {{ name }}
+    </ul>
+    <ul>
+        <li><a href= {{advertisement_url}} >{{ advertisement }}</a></li>
+        <li><a href= {{contacts_url}}>{{contacts}}</a></li>
+        <li><a href= {{about_url}}>{{about}}</a></li>
+        <li><a href= {{categories_url}}>{{categories}}</a></li>
+        <li><a href= {{regions_url}}>{{regions}}</a></li>
+    </ul>
+    <form action="" method="get">
+        {% csrf_token %}
+        <input name="s" placeholder="Поиск объявления..." type="text">
+        <button type="submit">Найти</button>
+        <output name = "result">{{message}}</output>
+    </form>
+</body>
+</html>
