@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    {% for m in menu %}
+        <li><a href="{% url m.url_name %}">{{m.title}}</a></li>
+    {% endfor %}
+    </ul>
+
+    {% if news %}
+    <ul>
+        {% for n in news %}
+        <li>
+            <h2>
+            {{ n.title }}
+            </h2>
+                Дата опубликования: {{ n.created_date }}
+            <p class="link-read-post"><a href="{{ n.get_absolute_url }}">Читать статью</a></p>
+            <hr>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>Статей нет</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+
+<h1>{{title}}</h1>
+    <form action="{% url 'news_add' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Добавить</button>
+</form>
+</html>

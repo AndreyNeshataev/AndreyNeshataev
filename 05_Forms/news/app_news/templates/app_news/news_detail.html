@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ news.title }}</title>
+</head>
+<body>
+<h1>{{ news.title }}</h1>
+    <p>{{ news.article|linebreaks }}</p>
+    Дата создания статьи: {{ news.created_date }}
+    <hr>
+
+    <p><a href="{% url 'news_update' news.pk %}">Изменить статью</a></p>
+    <hr>
+
+    <form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Добавить комментарий</button>
+    </form>
+    <hr>
+
+<h2>{{ title_commentary }}</h2>
+    <hr>
+    {% if commentary %}
+        {% for c in commentary %}
+            <p>Комментарий от: {{ c.user_name }}</p>
+            <p>{{ c.commentary }}</p>
+            <p>Дата создания комментария: {{ c.created_date }}</p>
+            <hr>
+        {% endfor %}
+    {% else %}
+            <p>Комментариев пока нет</p>
+    {% endif %}
+</body>
+</html>
