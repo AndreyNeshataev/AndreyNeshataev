@@ -84,10 +84,6 @@ class ViewingArticle(UpdateView, DetailView):
 
     def post(self, request, *args, **kwargs):
         form = self.get_form()
-        # if not request.user.is_authenticated:
-        #     User.objects.create(username=request.POST.get('user_name'))
-        # form = CommentsForm(request.POST)
-        # print(form['commentary'], form['user_name'])
         if form.is_valid():
             return self.form_valid(form)
         else:
@@ -99,6 +95,6 @@ class ViewingArticle(UpdateView, DetailView):
         if self.request.user.is_authenticated:
             self.object.user_name = self.request.user
         else:
-            self.object.author = self.request.POST.get('user_name')
+            self.object.author = self.request.POST.get('author')
         self.object.save()
         return super().form_valid(form)
