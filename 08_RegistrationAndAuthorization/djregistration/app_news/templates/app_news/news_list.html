@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+{% if request.user.is_authenticated %}
+    <h3>Добро пожаловать на сайт, {{ request.user.first_name }}</h3>
+    <p></p>
+    <a href="{% url 'logout' %}">Выйти</a> | <a href="{% url 'account' %}">Страница пользователя</a>
+{% else %}
+    <h3>Вы не авторизованы на сайте</h3>
+    <a href="{% url 'register' %}">Регистрация</a> | <a href="{% url 'login' %}">Войти</a>
+{% endif %}
+    <h1>{{ title }}</h1>
+
+{% if verifi %}
+    <u>{{ verifi }}</u>
+    {% for m in menu %}
+        <li><a href="{% url m.url_name %}">{{m.title}}</a></li>
+    {% endfor %}
+{% elif no_verifi %}
+        <u>{{ no_verifi }}</u>
+        <p>Вы можете только читать новости и оставлять комментарии.</p>
+        <p>Для дополнительных возможностей пройдите верификацию.</p>
+        <a href="#"><button>Оставить заявку на верификацию</button></a>
+{% else %}
+        <p>Вы можете только читать новости и оставлять комментарии.</p>
+        <p>Для дополнительных возможностей пройдите авторизацию и верификацию.</p>
+{% endif %}
+        <p>Фильтрация по дате создания:
+            <a href="{% url 'news_filter' pk=1 %}"><button>За сегодня</button></a>
+            <a href="{% url 'news_filter' pk=2 %}"><button>За неделю</button></a>
+            <a href="{% url 'news_filter' pk=3 %}"><button>За месяц</button></a>
+        </p>
+        <hr>
+</ul>
+    {% if news %}
+    <ul>
+        {% for n in news %}
+            <h2><a href="{{ n.get_absolute_url }}">{{ n.title }}</a></h2>
+            <h4>Теги:</h4>
+            {% for tag in n.tags.all %}
+                <li><a href="{{ tag.get_absolute_url}}">{{ tag.title}}</a></li>
+            {% endfor %}
+
+            <p>Дата создания: {{ n.created_date }}</p>
+            <hr>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>Статей нет</p>
+    {% endif %}
+</body>
+</html>

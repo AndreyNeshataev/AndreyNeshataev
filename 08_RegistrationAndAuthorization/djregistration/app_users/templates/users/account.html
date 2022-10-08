@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Страница пользователя</title>
+</head>
+<body>
+<table border="1" cellspacing="0" cellpadding="5" width="400">
+  <caption>
+    Данные пользователя
+  </caption>
+  <tbody>
+      <tr>
+        <td>User_name:</td><td>{{ request.user.username }}</td>
+      </tr>
+      <tr>
+        <td>Имя:</td><td>{{ request.user.first_name }}</td>
+      </tr>
+      <tr>
+        <td>Фамилия:</td><td>{{ request.user.last_name }}</td>
+      </tr>
+      <tr>
+        <td>Город:</td><td>{{ request.user.profile.city }}</td>
+      </tr>
+      <tr>
+        <td>Дата рождения:</td><td>{{ request.user.profile.date_of_birth }}</td>
+      </tr>
+      <tr>
+        <td>Номер телефона:</td><td>{{ request.user.profile.number_phone }}</td>
+      </tr>
+      <tr>
+        <td>Email:</td><td>{{ request.user.email }}</td>
+      </tr>
+      <tr>
+        <td>Верификация:</td><td>{{ request.user.profile.verification_flag }}</td>
+      </tr>
+      <tr>
+        <td>Количество публикаций:</td><td>{{ request.user.profile.number_published_news }}</td>
+      </tr>
+  </tbody>
+    <hr>
+</table>
+<p></p>
+    <a href="{% url 'news' %}">Назад</a>
+</body>
+</html>
