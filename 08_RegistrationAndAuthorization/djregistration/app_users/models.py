@@ -17,5 +17,5 @@ class Profile(models.Model):
         verbose_name_plural = 'Информация о пользователях'
         ordering = ['user']
         permissions = (
-            ('can_publish', 'Может опубликовать'),
+            ('can_verification', 'Может верифицировать'),
         )

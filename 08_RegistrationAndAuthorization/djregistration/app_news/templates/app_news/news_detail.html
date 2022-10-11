@@ -37,7 +37,7 @@
     <hr>
     {% if commentary %}
         {% for c in commentary %}
-            {% if c.user_name is None %}
+            {% if c.user_name %}
                 <p>Комментарий от: Аноним</p>
             {% else %}
                 <p>Комментарий от: {{ c.user_name }}</p>
