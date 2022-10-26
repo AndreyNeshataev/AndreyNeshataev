@@ -1,0 +1,46 @@
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}
+    Страница пользователя
+{% endblock %}
+
+{% block content %}
+{% if request.user.profile.avatar %}
+    <img width="30%" src="{{ request.user.profile.avatar.url }}">
+{% endif %}
+<table>
+  <tbody>
+      <tr>
+        <td>User_name:</td><td>{{ request.user.username }}</td>
+      </tr>
+      <tr>
+        <td>Имя:</td><td>{{ request.user.first_name }}</td>
+      </tr>
+      <tr>
+        <td>Фамилия:</td><td>{{ request.user.last_name }}</td>
+      </tr>
+      <tr>
+        <td>Город:</td><td>{{ request.user.profile.city }}</td>
+      </tr>
+      <tr>
+        <td>Дата рождения:</td><td>{{ request.user.profile.date_of_birth }}</td>
+      </tr>
+      <tr>
+        <td>Номер телефона:</td><td>{{ request.user.profile.number_phone }}</td>
+      </tr>
+      <tr>
+        <td>Email:</td><td>{{ request.user.email }}</td>
+      </tr>
+      <tr>
+        <td>Обо мне:</td><td>{{ request.user.profile.about_me }}</td>
+      </tr>
+
+  </tbody>
+</table>
+
+    <div class="d-grid gap-2 d-md-block mt-3">
+      <a class="btn btn-primary" href="{% url 'blog_list' %}">На главную</a>
+      <a class="btn btn-primary" href="{% url 'change_user_url' user.pk %}">Изменить данные</a>
+    </div>
+
+{% endblock %}
