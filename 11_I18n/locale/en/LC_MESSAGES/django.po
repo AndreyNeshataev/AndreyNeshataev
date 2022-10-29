@@ -1,0 +1,297 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-29 18:07+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\app_file\apps.py:8 .\app_file\models.py:16 .\app_file\models.py:19
+msgid "Файл"
+msgstr "File"
+
+#: .\app_file\apps.py:9 .\app_file\models.py:20
+msgid "Файлы"
+msgstr "Files"
+
+#: .\app_file\templates\posts\upload_post_file.html:5
+msgid "Загрузка файла со статьями"
+msgstr "Uploading a file with articles"
+
+#: .\app_file\templates\posts\upload_post_file.html:24
+#: .\blog\templates\blog\base_blog.html:62
+#: .\blog\templates\blog\base_blog.html:65
+msgid "Добавить"
+msgstr "Add"
+
+#: .\app_users\apps.py:7 .\app_users\models.py:8 .\blog\models.py:26
+msgid "Пользователь"
+msgstr "User"
+
+#: .\app_users\apps.py:8
+msgid "Пользователи"
+msgstr "Users"
+
+#: .\app_users\forms.py:9 .\app_users\forms.py:42
+msgid "Логин"
+msgstr "Login"
+
+#: .\app_users\forms.py:10 .\app_users\forms.py:57
+#: .\app_users\templates\users\account.html:18
+msgid "Имя"
+msgstr "Name"
+
+#: .\app_users\forms.py:11 .\app_users\forms.py:58
+#: .\app_users\templates\users\account.html:21
+msgid "Фамилия"
+msgstr "Surname"
+
+#: .\app_users\forms.py:12 .\app_users\models.py:9
+#: .\app_users\templates\users\account.html:24
+msgid "Город"
+msgstr "City"
+
+#: .\app_users\forms.py:13 .\app_users\models.py:10
+#: .\app_users\templates\users\account.html:27
+msgid "Дата рождения"
+msgstr "Date of birth"
+
+#: .\app_users\forms.py:14 .\app_users\models.py:11
+#: .\app_users\templates\users\account.html:30
+msgid "Номер телефона"
+msgstr "Phone number"
+
+#: .\app_users\forms.py:16 .\app_users\forms.py:71 .\app_users\models.py:12
+#: .\app_users\templates\users\account.html:36
+msgid "Обо мне"
+msgstr "About me"
+
+#: .\app_users\forms.py:17
+msgid "Добавить Аватар"
+msgstr "Add an Avatar"
+
+#: .\app_users\forms.py:18 .\app_users\forms.py:43
+msgid "Пароль"
+msgstr "Password"
+
+#: .\app_users\forms.py:19
+msgid "Повтор пароля"
+msgstr "Repeat password"
+
+#: .\app_users\forms.py:72
+msgid "Изменить Аватар"
+msgstr "Change Avatar"
+
+#: .\app_users\models.py:13
+msgid "Аватар"
+msgstr "Avatar"
+
+#: .\app_users\models.py:16 .\app_users\models.py:17
+msgid "Информация о пользователях"
+msgstr "User Information"
+
+#: .\app_users\templates\users\account.html:5
+msgid "Страница пользователя"
+msgstr "User page"
+
+#: .\app_users\templates\users\account.html:43
+msgid "На главную"
+msgstr "To the main page"
+
+#: .\app_users\templates\users\account.html:44
+msgid "Изменить данные"
+msgstr "Change Data"
+
+#: .\app_users\templates\users\change_user.html:5
+msgid "Изменение данных"
+msgstr "Changing data"
+
+#: .\app_users\templates\users\change_user.html:43
+msgid "Сохранить изменения"
+msgstr "Save Changes"
+
+#: .\app_users\templates\users\login.html:5
+#: .\blog\templates\blog\base_blog.html:45
+msgid "Авторизация"
+msgstr "Authorization"
+
+#: .\app_users\templates\users\login.html:27
+msgid "Войти"
+msgstr "Enter"
+
+#: .\app_users\templates\users\register.html:5
+#: .\app_users\templates\users\register.html:26
+#: .\blog\templates\blog\base_blog.html:48
+msgid "Регистрация"
+msgstr "Registration"
+
+#: .\app_users\templates\users\restore_password.html:6
+msgid "Восстановление пароля"
+msgstr "Password Recovery"
+
+#: .\app_users\templates\users\restore_password.html:12
+msgid "Восстановить пароль"
+msgstr "Recover Password"
+
+#: .\blog\admin.py:19
+msgid "Перевести в статус Опубликовано"
+msgstr "Translate to the Published status"
+
+#: .\blog\admin.py:20
+msgid "Перевести в статус Не опубликовано"
+msgstr "Translate to the status Not published"
+
+#: .\blog\apps.py:8 .\blog\templates\blog\blog_list.html:5
+msgid "БЛОГ"
+msgstr "BLOG"
+
+#: .\blog\apps.py:9
+msgid "БЛОГИ"
+msgstr "BLOGS"
+
+#: .\blog\forms.py:7
+msgid "Загрузить Фотографии"
+msgstr "Upload Photos"
+
+#: .\blog\models.py:18
+msgid "Заголовок"
+msgstr "Header"
+
+#: .\blog\models.py:20
+msgid "Текст статьи"
+msgstr "The text of the article"
+
+#: .\blog\models.py:21
+msgid "Дата создания"
+msgstr "Date of creation"
+
+#: .\blog\models.py:22
+msgid "Дата изменения"
+msgstr "Date of change"
+
+#: .\blog\models.py:23
+msgid "Опубликовано"
+msgstr "Published"
+
+#: .\blog\models.py:24 .\blog\models.py:68
+#: .\blog\templates\blog\base_blog.html:55
+#: .\blog\templates\blog\blog_list.html:22
+#: .\blog\templates\blog\post_detail.html:23
+#: .\blog\templates\blog\tags_list.html:10
+msgid "Теги"
+msgstr "Tags"
+
+#: .\blog\models.py:40 .\blog\models.py:48
+msgid "Статья"
+msgstr "Article"
+
+#: .\blog\models.py:41 .\blog\templates\blog\base_blog.html:52
+#: .\blog\templates\blog\blog_list.html:9
+msgid "Статьи"
+msgstr "Articles"
+
+#: .\blog\models.py:49 .\blog\models.py:52
+msgid "Фотография"
+msgstr "Photo"
+
+#: .\blog\models.py:53
+msgid "Фотографии"
+msgstr "Photos"
+
+#: .\blog\models.py:57 .\blog\models.py:67
+#: .\blog\templates\blog\base_blog.html:65
+msgid "Тег"
+msgstr "Tag"
+
+#: .\blog\templates\blog\add_post.html:5
+msgid "Создание Статьи"
+msgstr "Creating an Article"
+
+#: .\blog\templates\blog\add_post.html:25
+msgid "Создать Статью"
+msgstr "Create an Article"
+
+#: .\blog\templates\blog\add_tag.html:5
+msgid "Создание Тега"
+msgstr "Creating a Tag"
+
+#: .\blog\templates\blog\add_tag.html:26
+msgid "Создать Тег"
+msgstr "Creating a Tag"
+
+#: .\blog\templates\blog\base_blog.html:58
+msgid "Админ"
+msgstr "Admin"
+
+#: .\blog\templates\blog\base_blog.html:62
+#: .\blog\templates\blog\base_blog.html:68
+msgid "Статью"
+msgstr "Article"
+
+#: .\blog\templates\blog\base_blog.html:68
+msgid "Загрузить"
+msgstr "Download"
+
+#: .\blog\templates\blog\base_blog.html:71
+msgid "Моя страница"
+msgstr "My page"
+
+#: .\blog\templates\blog\base_blog.html:74
+msgid "Выйти"
+msgstr "Exit"
+
+#: .\blog\templates\blog\base_blog.html:81
+msgid "Поиск"
+msgstr "Search"
+
+#: .\blog\templates\blog\blog_list.html:14
+#: .\blog\templates\blog\post_detail.html:11
+msgid "Автор"
+msgstr "Author"
+
+#: .\blog\templates\blog\blog_list.html:19
+#: .\blog\templates\blog\tag_detail.html:20
+msgid "Читать"
+msgstr "Read"
+
+#: .\blog\templates\blog\delete.html:5 .\blog\templates\blog\delete.html:11
+msgid "Удаление фото"
+msgstr "Deleting a photo"
+
+#: .\blog\templates\blog\delete.html:14
+#: .\blog\templates\blog\update_post.html:33
+msgid "Удалить"
+msgstr "Remove"
+
+#: .\blog\templates\blog\post_detail.html:30
+#: .\blog\templates\blog\update_post.html:39
+msgid "Изменить Статью"
+msgstr "Edit the Article"
+
+#: .\blog\templates\blog\tag_detail.html:10
+msgid "Статьи с тегом"
+msgstr "Articles with the tag"
+
+#: .\blog\templates\blog\tags_list.html:5
+msgid "Список тегов"
+msgstr "List of tags"
+
+#: .\blog\templates\blog\update_post.html:5
+msgid "Изменение Статьи"
+msgstr "Changing the Article"
+
+#: .\blog\templates\blog\update_post.html:29
+msgid "Фотографии которые уже загружены"
+msgstr "Photos that have already been uploaded"

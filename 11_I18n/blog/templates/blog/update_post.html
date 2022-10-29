@@ -1,0 +1,45 @@
+{% extends 'blog/base_blog.html' %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Изменение Статьи" %}
+{% endblock %}
+
+{% block content %}
+    {% if request.user.is_authenticated %}
+    <form action="{% url 'update_post_url' post.slug %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {% for field in form %}
+            <div class="form-group">
+                {% if field.errors %}
+                    <div class="alert alert-danger">
+                        {{ field.errors }}
+                    </div>
+                {% endif %}
+                <p>
+                    {{ field.label }}
+                    {{ field }}
+                </p>
+            </div>
+        {% endfor %}
+
+        <div>
+            {% if photos %}
+                <p>{% trans "Фотографии которые уже загружены" %}</p>
+                {% for pht in photos %}
+                    <img width="15%" src="{{ pht.photo.url }}">
+                    <a class="btn btn-danger" aria-current="page"
+                    href="{% url 'photo_delete_url' pht.id %}">{% trans "Удалить" %}</a>
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        <div class="mt-3">
+        <button type="submit" class="btn btn-primary">{% trans "Изменить Статью" %}</button>
+        </div>
+    </form>
+    {% endif %}
+{% endblock %}
+
+

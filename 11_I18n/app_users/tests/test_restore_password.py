@@ -1,15 +1,15 @@
 from django.test import TestCase
 from django.urls import reverse
-
-from app_users.models import User
+from django.contrib.auth.models import User
 
 USER_EMAIL = 'test@company.com'
 OLD_PASSWORD = 'testpassword'
 
+
 class RestorePasswordTest(TestCase):
 
     def test_restore_password_url_exists_at_desired_location(self):
-        response = self.client.get('/app_users/restore_password/')
+        response = self.client.get('/blog/users/restore_password/')
         self.assertEqual(response.status_code, 200)
 
     def test_restore_password_uses_correct_template(self):
@@ -18,8 +18,7 @@ class RestorePasswordTest(TestCase):
         self.assertTemplateUsed(response, 'users/restore_password.html')
 
     def test_post_restore_password(self):
-        user = User.objects.create(username='test', email=USER_EMAIL,
-                            )
+        user = User.objects.create(username='test', email=USER_EMAIL)
         response = self.client.post(reverse('restore_password'), {'email': USER_EMAIL})
         self.assertEqual(response.status_code, 200)
         from django.core.mail import outbox
@@ -27,7 +26,7 @@ class RestorePasswordTest(TestCase):
         self.assertIn(USER_EMAIL, outbox[0].to)
 
     def test_if_password_was_changed(self):
-        user = User.objects.create(username='test', email=USER_EMAIL,)
+        user = User.objects.create(username='test', email=USER_EMAIL)
         user.set_password(OLD_PASSWORD)
         user.save()
         old_password_hash = user.password
