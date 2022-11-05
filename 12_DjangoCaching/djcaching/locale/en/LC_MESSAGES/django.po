@@ -1,0 +1,305 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-05 16:13+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\app_shops\apps.py:8 .\app_shops\models.py:15 .\app_shops\models.py:22
+#: .\app_shops\models.py:42
+msgid "Магазин"
+msgstr "Shop"
+
+#: .\app_shops\apps.py:9 .\app_shops\models.py:16
+#: .\app_shops\templates\shops\base.html:64
+#: .\app_shops\templates\shops\shops_list.html:9
+msgid "Магазины"
+msgstr "Shops"
+
+#: .\app_shops\models.py:8
+msgid "Название магазина"
+msgstr "Name of shop"
+
+#: .\app_shops\models.py:9
+msgid "Дата установления скидки"
+msgstr "Date of discount establishment"
+
+#: .\app_shops\models.py:23
+msgid "Название товара"
+msgstr "Product name"
+
+#: .\app_shops\models.py:24 .\app_users\models.py:24
+msgid "Цена товара"
+msgstr "Product price"
+
+#: .\app_shops\models.py:25
+msgid "Скидка в процентах"
+msgstr "Percentage discount"
+
+#: .\app_shops\models.py:35 .\app_shops\templates\shops\home.html:60
+#: .\app_users\models.py:23
+msgid "Товар"
+msgstr "Product"
+
+#: .\app_shops\models.py:36
+msgid "Товары"
+msgstr "Products"
+
+#: .\app_shops\models.py:43 .\app_shops\models.py:46
+msgid "Предложение магазина"
+msgstr "Store offer"
+
+#: .\app_shops\models.py:47
+msgid "Предложения магазина"
+msgstr "Store Offers"
+
+#: .\app_shops\templates\shops\base.html:45
+#: .\app_users\templates\users\login.html:5
+msgid "Авторизация"
+msgstr "Authorization"
+
+#: .\app_shops\templates\shops\base.html:48
+#: .\app_users\templates\users\register.html:5
+#: .\app_users\templates\users\register.html:26
+msgid "Регистрация"
+msgstr "Registration"
+
+#: .\app_shops\templates\shops\base.html:52 .\app_users\models.py:28
+#: .\app_users\models.py:29 .\app_users\templates\users\history.html:5
+#: .\app_users\templates\users\history.html:11
+msgid "История покупок"
+msgstr "Purchase history"
+
+#: .\app_shops\templates\shops\base.html:55
+msgid "Выйти"
+msgstr "Exit"
+
+#: .\app_shops\templates\shops\base.html:60
+msgid "Админ"
+msgstr "Admin"
+
+#: .\app_shops\templates\shops\base.html:67
+msgid "На главную"
+msgstr "To Home page"
+
+#: .\app_shops\templates\shops\home.html:5
+msgid "Главная страница"
+msgstr "Home page"
+
+#: .\app_shops\templates\shops\home.html:10
+msgid "Добро пожаловать в личный кабинет программы лояльности"
+msgstr "Welcome to the personal account of the loyalty program"
+
+#: .\app_shops\templates\shops\home.html:12
+msgid "Данные пользователя"
+msgstr "User data"
+
+#: .\app_shops\templates\shops\home.html:16 .\app_users\forms.py:11
+#: .\app_users\forms.py:52
+msgid "Имя"
+msgstr "Name"
+
+#: .\app_shops\templates\shops\home.html:19 .\app_users\forms.py:12
+#: .\app_users\forms.py:53
+msgid "Фамилия"
+msgstr "Surname"
+
+#: .\app_shops\templates\shops\home.html:22 .\app_users\forms.py:13
+#: .\app_users\forms.py:67 .\app_users\models.py:10
+msgid "Город"
+msgstr "City"
+
+#: .\app_shops\templates\shops\home.html:25 .\app_users\forms.py:14
+#: .\app_users\models.py:11
+msgid "Дата рождения"
+msgstr "Date of birth"
+
+#: .\app_shops\templates\shops\home.html:28 .\app_users\forms.py:15
+#: .\app_users\forms.py:68 .\app_users\models.py:12
+msgid "Номер телефона"
+msgstr "Phone number"
+
+#: .\app_shops\templates\shops\home.html:31 .\app_users\models.py:13
+msgid "Баланс на счету"
+msgstr "Account balance"
+
+#: .\app_shops\templates\shops\home.html:36
+msgid "Пополнить баланс"
+msgstr "Top up your balance"
+
+#: .\app_shops\templates\shops\home.html:37
+msgid "Изменить данные"
+msgstr "Change Data"
+
+#: .\app_shops\templates\shops\home.html:41
+msgid "Предложения и Акции магазинов"
+msgstr "Store Offers and Promotions"
+
+#: .\app_shops\templates\shops\home.html:60
+msgid "Сегодняшняя скидка"
+msgstr "Today's discount"
+
+#: .\app_shops\templates\shops\home.html:69
+msgid "Предложений пока нет"
+msgstr "There are no offers yet"
+
+#: .\app_shops\templates\shops\shop_page.html:5
+msgid "Cтраница магазина"
+msgstr "Store page"
+
+#: .\app_shops\templates\shops\shop_page.html:19
+msgid "Цена"
+msgstr "Price"
+
+#: .\app_shops\templates\shops\shop_page.html:22
+msgid "Сегодня"
+msgstr "Today"
+
+#: .\app_shops\templates\shops\shop_page.html:22
+msgid "по этому для Вас Скидка составляет"
+msgstr "therefore, the discount for you is"
+
+#: .\app_shops\templates\shops\shop_page.html:23
+msgid "Для Вас сегодня специальная цена, с учетом скидки составляет"
+msgstr "You have a special price today, taking into account the discount is"
+
+#: .\app_shops\templates\shops\shop_page.html:25
+msgid "Сегодня будний день, скидок нет"
+msgstr "Today is a weekday, there are no discounts"
+
+#: .\app_shops\templates\shops\shop_page.html:27
+msgid "Купить"
+msgstr "Buy"
+
+#: .\app_shops\templates\shops\shop_page.html:33
+msgid "Доступных товаров пока нет"
+msgstr "There are no available products yet"
+
+#: .\app_shops\templates\shops\shops_list.html:5
+msgid "Страница с магазинами"
+msgstr "Page with stores"
+
+#: .\app_shops\templates\shops\shops_list.html:17
+msgid "Зайти"
+msgstr "Enter"
+
+#: .\app_shops\templates\shops\shops_list.html:22
+msgid "Доступных магазинов пока нет"
+msgstr "There are no available stores yet"
+
+#: .\app_shops\views.py:43
+msgid "Понедельник"
+msgstr "Monday"
+
+#: .\app_shops\views.py:43
+msgid "Вторник"
+msgstr "Tuesday"
+
+#: .\app_shops\views.py:43
+msgid "Среда"
+msgstr "Wednesday"
+
+#: .\app_shops\views.py:43
+msgid "Четверг"
+msgstr "Thursday"
+
+#: .\app_shops\views.py:43
+msgid "Пятница"
+msgstr "Friday"
+
+#: .\app_shops\views.py:43
+msgid "Суббота"
+msgstr "Saturday"
+
+#: .\app_shops\views.py:43
+msgid "Воскресенье"
+msgstr "Sunday"
+
+#: .\app_shops\views.py:76
+msgid "Недостаточно средств, пополните баланс"
+msgstr "Insufficient funds, top up your balance"
+
+#: .\app_users\apps.py:8 .\app_users\models.py:9 .\app_users\models.py:22
+msgid "Пользователь"
+msgstr "User"
+
+#: .\app_users\apps.py:9
+msgid "Пользователи"
+msgstr "Users"
+
+#: .\app_users\forms.py:10 .\app_users\forms.py:37
+msgid "Логин"
+msgstr "Login"
+
+#: .\app_users\forms.py:16 .\app_users\forms.py:38
+msgid "Пароль"
+msgstr "Password"
+
+#: .\app_users\forms.py:17
+msgid "Повтор пароля"
+msgstr "Repeat password"
+
+#: .\app_users\forms.py:81
+msgid "Сумма пополнения"
+msgstr "Deposit amount"
+
+#: .\app_users\forms.py:94
+msgid "На эту сумму невозможно пополнить баланс"
+msgstr "It is impossible to top up the balance with this amount"
+
+#: .\app_users\models.py:16 .\app_users\models.py:17
+msgid "Информация о пользователях"
+msgstr "User Information"
+
+#: .\app_users\models.py:25 .\app_users\templates\users\history.html:16
+msgid "Дата покупки"
+msgstr "Дата покупки"
+
+#: .\app_users\templates\users\change_user.html:5
+msgid "Изменение данных"
+msgstr "Changing data"
+
+#: .\app_users\templates\users\change_user.html:43
+msgid "Сохранить изменения"
+msgstr "Save Changes"
+
+#: .\app_users\templates\users\history.html:17
+msgid "Покупка"
+msgstr "Purchase"
+
+#: .\app_users\templates\users\history.html:17
+msgid "Цена покупки"
+msgstr "Purchase price"
+
+#: .\app_users\templates\users\history.html:18
+msgid "Куплено в"
+msgstr "Purchased in"
+
+#: .\app_users\templates\users\history.html:23
+msgid "История покупок пока пуста"
+msgstr "The purchase history is still empty"
+
+#: .\app_users\templates\users\login.html:27
+msgid "Войти"
+msgstr "Enter"
+
+#: .\app_users\templates\users\replenishment_balance.html:5
+msgid "Пополнение баланса"
+msgstr "Replenishment of the balance"
+
+#: .\app_users\templates\users\replenishment_balance.html:26
+msgid "Пополнить"
+msgstr "Replenish"
