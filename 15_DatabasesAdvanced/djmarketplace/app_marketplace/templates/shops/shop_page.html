@@ -1,0 +1,46 @@
+{% extends 'shops/base.html' %}
+{% load i18n %}
+
+    {% block title %}
+        {% trans "Cтраница магазина" %}
+    {% endblock %}
+
+    {% block content %}
+        <form action="{% url 'shop_page' shop.pk %}" method="post">
+            {% csrf_token %}
+            {% if variation_list %}
+                <h2 class="mb-3">{{ shop }}</h2>
+                {% for var in variation_list %}
+                    <div class="card" style="width: 30rem;">
+                        <div class="card-header">
+                            {{ var.product.name_goods }} | {% trans "Количество в магазине" %}: {{ var.quantity }} шт
+                        </div>
+                        <div class="card-body">
+                            {{ var.product.description }}
+                        </div>
+                        <hr>
+                        <div class="card-body">
+                            <p>{% trans "Цена" %}: {{ var.price }} руб</p>
+                            {% if request.user.is_authenticated %}
+                                {% if right_day %}
+                                    <p>{% trans "Сегодня" %}: {{ day }}, {% trans "по этому для Вас Скидка составляет" %}: {{ var.sale }}%</p>
+                                    <p>{% trans "Для Вас сегодня специальная цена, с учетом скидки составляет" %}: {{ var.get_price }} руб</p>
+                                {% else %}
+                                    <p>{% trans "Сегодня будний день, скидок нет" %}</p>
+                                {% endif %}
+                                   <a class="btn btn-primary" aria-current="page" href="{% url 'cart_add' var.id %}">{% trans "Добавить в корзину" %}</a>
+                          {% endif %}
+                          {% if not variation_list.1 %}
+                            <a class="btn btn-primary" aria-current="page" href="{% url 'shop_page' shop.pk %}">{% trans "В магазин" %}</a>
+                          {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <h5 class="card-title">{% trans "Доступных товаров пока нет" %}</h5>
+            {% endif %}
+         </form>
+    {% endblock %}
+
+
+

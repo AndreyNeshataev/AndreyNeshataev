@@ -46,7 +46,7 @@ class ShopTests(TestCase):
         url = reverse('home')
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'shops/home.html')
+        self.assertTemplateUsed(response, 'shops/account.html')
 
     def test_shop_list(self):
         url = reverse('shops_list')

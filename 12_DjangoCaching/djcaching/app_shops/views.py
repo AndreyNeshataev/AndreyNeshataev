@@ -25,7 +25,7 @@ def home_page(request, *args, **kwargs):
         cache.set_many(user_cache, 60 * 5)
     context = user_cache
     context['goods'] = goods
-    return render(request, 'shops/home.html', context=context)
+    return render(request, 'shops/account.html', context=context)
 
 
 def shops_list(request, *args, **kwargs):

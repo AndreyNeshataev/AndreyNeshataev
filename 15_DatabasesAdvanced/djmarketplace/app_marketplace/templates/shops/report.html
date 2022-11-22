@@ -1,0 +1,35 @@
+{% extends 'shops/base.html' %}
+{% load i18n %}
+
+    {% block title %}
+        {% trans "Отчет" %}
+    {% endblock %}
+
+    {% block content %}
+        {% if max_items %}
+            <div class="card-header">
+                <h3>{{ header }}</h3>
+            </div>
+            <div class="card-body">
+                <p>
+                    <a href="{% url 'report' pk=1 %}" class="btn btn-primary">{% trans "За сегодня" %}</a>
+                    <a href="{% url 'report' pk=2 %}" class="btn btn-primary">{% trans "За неделю" %}</a>
+                    <a href="{% url 'report' pk=3 %}" class="btn btn-primary">{% trans "За месяц" %}</a>
+                    <a href="{% url 'report' pk=4 %}" class="btn btn-primary">{% trans "За все время" %}</a>
+                </p>
+            </div>
+            {% for item in max_items %}
+                <div class="card text-center" style="width: 50rem;">
+                    <div class="card-header">
+                        <p>{% trans "Наименование товара" %}: {{ item.name }}</p>
+                    </div>
+                    <div class="card-body">
+                        <p>{% trans "Идентификатор товара" %}: {{ item.goods }}</p>
+                        <p>{% trans "Количество проданных единиц" %}: {{ item.quantity_sum }} шт</p>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <h5 class="card-title">{% trans "История покупок пока пуста" %}</h5>
+        {% endif %}
+    {% endblock %}
