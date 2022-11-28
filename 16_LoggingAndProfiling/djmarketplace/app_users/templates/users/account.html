@@ -1,0 +1,45 @@
+{% extends 'shops/base.html' %}
+{% load i18n %}
+
+    {% block title %}
+        {% trans "Главная страница" %}
+    {% endblock %}
+
+    {% block content %}
+        {% if request.user.is_authenticated %}
+            <h3>{% trans "Добро пожаловать в личный кабинет" %}, {{ request.user }}</h3>
+        <hr>
+            <h3 class="mb-3">{% trans "Данные пользователя" %}:</h3>
+            <table>
+              <tbody>
+                  <tr>
+                    <td>{% trans "Имя" %}:</td><td>{{ request.user.first_name }}</td>
+                  </tr>
+                  <tr>
+                    <td>{% trans "Фамилия" %}:</td><td>{{ request.user.last_name }}</td>
+                  </tr>
+                  <tr>
+                    <td>{% trans "Город" %}:</td><td>{{ request.user.profile.city }}</td>
+                  </tr>
+                  <tr>
+                    <td>{% trans "Дата рождения" %}:</td><td>{{ request.user.profile.date_of_birth }}</td>
+                  </tr>
+                  <tr>
+                    <td>{% trans "Номер телефона" %}:</td><td>{{ request.user.profile.number_phone }}</td>
+                  </tr>
+                  <tr>
+                    <td>{% trans "Баланс на счету" %}:</td><td>{{ request.user.profile.balance }} руб</td>
+                  </tr>
+                  <tr>
+                    <td>{% trans "Статус" %}:</td><td>{{ request.user.profile.get_status }}</td>
+                  </tr>
+              </tbody>
+            </table>
+                <div class="d-grid gap-2 d-md-block mt-3">
+                  <a class="btn btn-primary" href="{% url 'replenishment_url' user.pk %}">{% trans "Пополнить баланс" %}</a>
+                  <a class="btn btn-primary" href="{% url 'change_user_url' user.pk %}">{% trans "Изменить данные" %}</a>
+                  <a class="btn btn-primary" href="{% url 'history_url' user.pk %}">{% trans "История покупок" %}</a>
+                </div>
+                <hr>
+        {% endif %}
+    {% endblock %}
